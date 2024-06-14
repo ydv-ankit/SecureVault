@@ -10,7 +10,7 @@ export default function Auth() {
   };
 
   return (
-    <div className="bg-gradient-to-tr from-black via-slate-900 to-slate-700 h-screen overflow-hidden">
+    <div className="h-screen overflow-hidden">
       <div className="md:w-[500px] mx-auto h-full flex justify-center items-center">
         {isLogin ? (
           <Login toggleForm={toggleForm} />
