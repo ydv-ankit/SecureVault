@@ -1,4 +1,6 @@
+import axios from "axios";
 import React from "react";
+import toast from "react-hot-toast";
 
 export default function Register({ toggleForm }) {
   const [formData, setFormData] = React.useState({
@@ -21,7 +23,10 @@ export default function Register({ toggleForm }) {
       })
       .then((res) => {
         if (res.data.message === "success") {
-          toggleForm();
+          toast.success("Registration successful ! Please login.");
+          setTimeout(() => {
+            toggleForm();
+          }, 2000);
         }
       })
       .catch((err) => {
