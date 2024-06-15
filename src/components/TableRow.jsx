@@ -11,10 +11,10 @@ export default function TableRow({ data, handleDelete }) {
 
   return (
     <tr>
-      <td className="p-2 text-center">{data.site}</td>
-      <td className="p-2 text-center">{data.username}</td>
-      <td className="p-2 text-center">{data.email}</td>
-      <td className="p-2 text-center">
+      <td className="p-2 text-center min-w-36">{data.site}</td>
+      <td className="p-2 text-center min-w-36">{data.username}</td>
+      <td className="p-2 text-center min-w-36">{data.email}</td>
+      <td className="p-2 text-center min-w-36">
         <div className="flex justify-between">
           {showPassword ? <div>{data.password}</div> : <div>********</div>}
           <img
@@ -25,8 +25,8 @@ export default function TableRow({ data, handleDelete }) {
           />
         </div>
       </td>
-      <td className="p-2 text-center">{data.otherDetails}</td>
-      <td className="p-2 text-center">
+      <td className="p-2 text-center min-w-36">{data.otherDetails}</td>
+      <td className="p-2 text-center min-w-36">
         <div className="flex justify-around items-center">
           <img
             src="/edit.png"

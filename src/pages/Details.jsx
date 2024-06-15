@@ -38,18 +38,18 @@ export default function Details() {
     fetchData();
   }, [handleDelete]);
   return (
-    <div className="w-full">
-      <div className="border border-slate-500 text-white max-w-6xl mx-auto min-h-[100vh] relative">
+    <div className="max-w-full overflow-scroll">
+      <div className="text-white max-w-6xl mx-auto min-h-[100vh] relative">
         <div className="flex justify-between p-4 items-center">
           {data.length !== 0 ? (
             <table className="w-full">
               <thead className="border-b my-2">
                 <tr>
-                  <th className="p-2 font-bold">Site</th>
-                  <th className="p-2 font-bold">Username</th>
-                  <th className="p-2 font-bold">Email ID</th>
-                  <th className="p-2 font-bold">Password</th>
-                  <th className="p-2 font-bold">Other Details</th>
+                  <th className="p-2 font-bold min-w-36">Site</th>
+                  <th className="p-2 font-bold min-w-36">Username</th>
+                  <th className="p-2 font-bold min-w-36">Email ID</th>
+                  <th className="p-2 font-bold min-w-36">Password</th>
+                  <th className="p-2 font-bold min-w-36">Other Details</th>
                   <th>Actions</th>
                 </tr>
               </thead>
