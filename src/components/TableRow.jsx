@@ -22,7 +22,7 @@ export default function TableRow({ data, handleDelete }) {
         <div className="flex justify-between">
           {showPassword ? <div>{data.password}</div> : <div>********</div>}
           <img
-            src={showPassword ? "/show.png" : "/hide.png"}
+            src={showPassword ? "/hide.png" : "/show.png"}
             alt=""
             className="w-6 h-auto invert cursor-pointer"
             onClick={toggleShowPassword}
