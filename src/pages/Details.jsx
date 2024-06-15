@@ -23,7 +23,7 @@ export default function Details() {
 
   const fetchData = async () => {
     await axios
-      .get(`${import.meta.env.VITE_SERVER_URI}/api/data/get/${user._id}`)
+      .get(`${import.meta.env.VITE_SERVER_URI}/api/data/user/${user._id}`)
       .then((res) => {
         setData(res.data.data);
       })

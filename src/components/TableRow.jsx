@@ -1,9 +1,13 @@
-import axios from "axios";
 import { useState } from "react";
-import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 export default function TableRow({ data, handleDelete }) {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
+
+  const handleEdit = () => {
+    navigate("/edit?id=" + data._id);
+  };
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -32,6 +36,7 @@ export default function TableRow({ data, handleDelete }) {
             src="/edit.png"
             alt=""
             className="w-4 h-4 invert cursor-pointer"
+            onClick={handleEdit}
           />
           <img
             src="/bin.png"

@@ -4,6 +4,7 @@ import Details from "./pages/Details";
 import ProtectedRoute from "./components/ProtectedRoute";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
+import EditData from "./pages/EditData";
 
 export default function App() {
   return (
@@ -28,6 +29,15 @@ export default function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/edit"
+            element={
+              <ProtectedRoute>
+                <EditData />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>
     </div>
