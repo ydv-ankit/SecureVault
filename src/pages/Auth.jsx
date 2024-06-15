@@ -11,7 +11,7 @@ export default function Auth() {
 
   return (
     <div className="h-screen overflow-hidden">
-      <div className="md:w-[500px] mx-auto h-full flex justify-center items-center">
+      <div className="md:w-[500px] mx-auto h-full flex justify-center items-center w-full">
         {isLogin ? (
           <Login toggleForm={toggleForm} />
         ) : (

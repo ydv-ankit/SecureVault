@@ -37,7 +37,7 @@ export default function Login({ toggleForm }) {
   };
 
   return (
-    <div className="backdrop-blur-sm bg-white/10 sm:w-4/5 w-full mx-auto min-h-96 rounded-lg p-4 text-white flex items-center justify-center flex-col">
+    <div className="backdrop-blur-sm md:bg-white/10 bg-transparent sm:w-4/5 w-full mx-auto min-h-96 rounded-lg p-4 text-white flex items-center justify-center flex-col">
       <h1 className="text-4xl my-2">Login</h1>
       <p>Please login to your account !</p>
       <form className="flex flex-col">
