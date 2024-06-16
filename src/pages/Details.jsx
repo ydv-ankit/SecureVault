@@ -23,11 +23,12 @@ export default function Details() {
 
   const fetchData = async () => {
     await axios
-      .get(`${import.meta.env.VITE_SERVER_URI}/api/data/user/${user._id}`)
+      .get(`${import.meta.env.VITE_SERVER_URI}/api/data/user/${user?._id}`)
       .then((res) => {
         setData(res.data.data);
       })
       .catch((err) => {
+        toast.error("Error !");
         console.error(err);
       });
   };
@@ -38,7 +39,7 @@ export default function Details() {
     fetchData();
   }, [handleDelete]);
   return (
-    <div className="max-w-full overflow-scroll">
+    <div className="max-w-full">
       <div className="text-white max-w-6xl mx-auto min-h-[100vh] relative">
         <div className="flex justify-between p-4 items-center">
           {data.length !== 0 ? (

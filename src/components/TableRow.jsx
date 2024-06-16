@@ -20,11 +20,11 @@ export default function TableRow({ data, handleDelete }) {
       <td className="p-2 text-center min-w-36">{data.email}</td>
       <td className="p-2 text-center min-w-36">
         <div className="flex justify-between">
-          {showPassword ? <div>{data.password}</div> : <div>********</div>}
+          {showPassword ? <div className="m-2">{data.password}</div> : <div className="m-2">********</div>}
           <img
             src={showPassword ? "/hide.png" : "/show.png"}
             alt=""
-            className="w-6 h-auto invert cursor-pointer"
+            className="w-6 h-6 invert cursor-pointer"
             onClick={toggleShowPassword}
           />
         </div>
