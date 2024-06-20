@@ -37,13 +37,13 @@ export default function AddData() {
   };
 
   return (
-    <div className="w-full p-1">
-      <h1 className="text-white text-3xl text-center mt-5">Add Data</h1>
+    <div className="w-full md:w-96 p-1 mx-auto">
+      <h1 className="text-3xl text-center mt-5">Add Data</h1>
       <form className="flex flex-col items-center mt-4">
         <input
           type="text"
           placeholder="Website Name"
-          className="p-2 w-5/6 rounded-md"
+          className="p-2 w-5/6 rounded-md border border-slate-500"
           value={data.site}
           onChange={(e) => {
             setData({ ...data, site: e.target.value });
@@ -52,7 +52,7 @@ export default function AddData() {
         <input
           type="text"
           placeholder="Username"
-          className="p-2 w-5/6 rounded-md mt-4"
+          className="p-2 w-5/6 rounded-md mt-4 border border-slate-500"
           value={data.username}
           onChange={(e) => {
             setData({ ...data, username: e.target.value });
@@ -61,7 +61,7 @@ export default function AddData() {
         <input
           type="text"
           placeholder="Email ID"
-          className="p-2 w-5/6 rounded-md mt-4"
+          className="p-2 w-5/6 rounded-md mt-4 border border-slate-500"
           value={data.email}
           onChange={(e) => {
             setData({ ...data, email: e.target.value });
@@ -70,7 +70,7 @@ export default function AddData() {
         <input
           type="text"
           placeholder="Password"
-          className="p-2 w-5/6 rounded-md mt-4"
+          className="p-2 w-5/6 rounded-md mt-4 border border-slate-500"
           value={data.password}
           onChange={(e) => {
             setData({ ...data, password: e.target.value });
@@ -79,7 +79,7 @@ export default function AddData() {
         <input
           type="text"
           placeholder="Other Details"
-          className="p-2 w-5/6 rounded-md mt-4"
+          className="p-2 w-5/6 rounded-md mt-4 border border-slate-500"
           value={data.otherDetails}
           onChange={(e) => {
             setData({ ...data, otherDetails: e.target.value });

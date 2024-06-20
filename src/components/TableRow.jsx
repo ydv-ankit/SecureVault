@@ -15,17 +15,17 @@ export default function TableRow({ data, handleDelete }) {
 
   return (
     <tr>
-      <td className="p-2 text-center min-w-36 border border-gray-200">
+      <td className="p-4 text-center min-w-36 border border-gray-200">
         {data.site}
       </td>
-      <td className="p-2 text-center min-w-36 border border-gray-200">
+      <td className="p-4 text-center min-w-36 border border-gray-200">
         {data.username}
       </td>
-      <td className="p-2 text-center min-w-36 border border-gray-200">
+      <td className="p-4 text-center min-w-36 border border-gray-200">
         {data.email}
       </td>
-      <td className="p-2 text-center min-w-36 border border-gray-200">
-        <div className="flex justify-between">
+      <td className="p-4 text-center min-w-36 border border-gray-200">
+        <div className="flex justify-between items-center">
           {showPassword ? (
             <div className="m-2">{data.password}</div>
           ) : (
@@ -34,15 +34,15 @@ export default function TableRow({ data, handleDelete }) {
           <img
             src={showPassword ? "/hide.png" : "/show.png"}
             alt=""
-            className="w-5 h-5 cursor-pointer"
+            className="w-5 h-5 cursor-pointer mr-4"
             onClick={toggleShowPassword}
           />
         </div>
       </td>
-      <td className="p-2 text-center min-w-36 border border-gray-200">
+      <td className="p-4 text-center min-w-36 border border-gray-200">
         {data.otherDetails}
       </td>
-      <td className="p-2 text-center min-w-36 border border-gray-200">
+      <td className="p-4 text-center min-w-36 border border-gray-200">
         <div className="flex justify-around items-center">
           <img
             src="/edit.png"
