@@ -15,27 +15,39 @@ export default function TableRow({ data, handleDelete }) {
 
   return (
     <tr>
-      <td className="p-2 text-center min-w-36">{data.site}</td>
-      <td className="p-2 text-center min-w-36">{data.username}</td>
-      <td className="p-2 text-center min-w-36">{data.email}</td>
-      <td className="p-2 text-center min-w-36">
+      <td className="p-2 text-center min-w-36 border border-gray-200">
+        {data.site}
+      </td>
+      <td className="p-2 text-center min-w-36 border border-gray-200">
+        {data.username}
+      </td>
+      <td className="p-2 text-center min-w-36 border border-gray-200">
+        {data.email}
+      </td>
+      <td className="p-2 text-center min-w-36 border border-gray-200">
         <div className="flex justify-between">
-          {showPassword ? <div className="m-2">{data.password}</div> : <div className="m-2">********</div>}
+          {showPassword ? (
+            <div className="m-2">{data.password}</div>
+          ) : (
+            <div className="m-2">********</div>
+          )}
           <img
             src={showPassword ? "/hide.png" : "/show.png"}
             alt=""
-            className="w-6 h-6 invert cursor-pointer"
+            className="w-5 h-5 cursor-pointer"
             onClick={toggleShowPassword}
           />
         </div>
       </td>
-      <td className="p-2 text-center min-w-36">{data.otherDetails}</td>
-      <td className="p-2 text-center min-w-36">
+      <td className="p-2 text-center min-w-36 border border-gray-200">
+        {data.otherDetails}
+      </td>
+      <td className="p-2 text-center min-w-36 border border-gray-200">
         <div className="flex justify-around items-center">
           <img
             src="/edit.png"
             alt=""
-            className="w-4 h-4 invert cursor-pointer"
+            className="w-4 h-4 cursor-pointer"
             onClick={handleEdit}
           />
           <img

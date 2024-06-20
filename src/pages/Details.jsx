@@ -39,35 +39,27 @@ export default function Details() {
     fetchData();
   }, [handleDelete]);
   return (
-    <div className="max-w-full">
-      <div className="text-white max-w-6xl mx-auto min-h-[100vh] relative">
-        <div className="flex justify-between p-4 items-center">
-          {data.length !== 0 ? (
-            <table className="w-full">
-              <thead className="border-b my-2">
-                <tr>
-                  <th className="p-2 font-bold min-w-36">Site</th>
-                  <th className="p-2 font-bold min-w-36">Username</th>
-                  <th className="p-2 font-bold min-w-36">Email ID</th>
-                  <th className="p-2 font-bold min-w-36">Password</th>
-                  <th className="p-2 font-bold min-w-36">Other Details</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                {data.map((item, index) => {
-                  return <TableRow key={index} data={item} handleDelete={handleDelete} />;
-                })}
-              </tbody>
-            </table>
-          ) : (
-            <div className="text-center text-white text-2xl p-4 w-full">
-              No Data Found
-            </div>
-          )}
-        </div>
-        <AddButton/>
+    <div className="max-w-5xl mx-auto pb-32">
+      <div className="flex justify-between items-center">
+        <AddButton />
       </div>
+      <table className="w-full mt-4 border">
+        <thead className="w-full">
+          <tr>
+            <th className="border border-gray-200 text-center">Site</th>
+            <th className="border border-gray-200 text-center">Username</th>
+            <th className="border border-gray-200 text-center">Email</th>
+            <th className="border border-gray-200 text-center">Password</th>
+            <th className="border border-gray-200 text-center">Other details</th>
+            <th className="border border-gray-200 text-center">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((item) => (
+            <TableRow key={item._id} data={item} handleDelete={handleDelete} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

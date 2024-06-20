@@ -8,7 +8,7 @@ import EditData from "./pages/EditData";
 
 export default function App() {
   return (
-    <div className="bg-gradient-to-tr from-black via-slate-900 to-slate-700 min-h-[100vh]">
+    <div className="min-h-[100vh] w-full">
       <Toaster />
       <BrowserRouter>
         <Routes>

@@ -36,12 +36,12 @@ export default function Register({ toggleForm }) {
   };
 
   return (
-    <div className="backdrop-blur-sm bg-white/10 sm:w-4/5 w-full mx-auto min-h-96 rounded-lg p-4 text-white flex items-center justify-center flex-col">
+    <div className="sm:w-4/5 w-full mx-auto min-h-96 rounded-lg p-4 flex items-center justify-center flex-col">
       <h1 className="text-4xl my-2">Register</h1>
       <p>Please enter details to continue !</p>
       <form className="flex flex-col">
         <input
-          className="bg-transparent border border-slate-700 p-2 mb-2 mt-2 outline-none focus:bg-gray-800 rounded-md text-md"
+          className="bg-transparent border border-slate-700 p-2 mb-2 mt-2 outline-none rounded-md text-md"
           type="text"
           placeholder="Username"
           value={formData.username}
@@ -50,14 +50,14 @@ export default function Register({ toggleForm }) {
           }
         />
         <input
-          className="bg-transparent border border-slate-700 p-2 mb-2 mt-2 outline-none focus:bg-gray-800 rounded-md text-md"
+          className="bg-transparent border border-slate-700 p-2 mb-2 mt-2 outline-none rounded-md text-md"
           type="text"
           placeholder="Email Id"
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
         <input
-          className="bg-transparent border border-slate-700 p-2 mb-2 mt-2 outline-none focus:bg-gray-800 rounded-md text-md"
+          className="bg-transparent border border-slate-700 p-2 mb-2 mt-2 outline-none rounded-md text-md"
           type="password"
           placeholder="Password"
           autoComplete="off"
@@ -66,15 +66,15 @@ export default function Register({ toggleForm }) {
             setFormData({ ...formData, password: e.target.value })
           }
         />
-        <p className="text-red-400 text-sm">{error}</p>
+        <p className="text-red-400 text-sm text-center">{error}</p>
         <button
-          className="mt-2 border border-slate-600 rounded-xl p-2 cursor-pointer hover:bg-gray-900"
+          className="mt-2 border border-slate-600 rounded-xl p-2 cursor-pointer hover:bg-gray-200"
           onClick={handleSubmit}>
           Register
         </button>
         <div className="w-full border-b-2 border-slate-600 my-4"></div>
         <button
-          className="mt-2 border border-slate-600 rounded-xl p-2 cursor-pointer hover:bg-gray-900"
+          className="mt-2 border border-slate-600 rounded-xl p-2 cursor-pointer hover:bg-gray-200"
           onClick={toggleForm}>
           Login
         </button>
